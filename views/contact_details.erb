@@ -1,0 +1,37 @@
+
+<a href="/">Home</a><br><a href="/edit">Edit</a>
+
+<h3> Contact Details for <%= @contact.first_name() %> <%= @contact.last_name() %> </h3>
+
+
+
+<ul>
+  <li><label>First Name: </label> <%= @contact.first_name() %></li>
+  <li><label>Last Name: </label> <%= @contact.last_name() %></li>
+  <li><label>Job Title: </label> <%= @contact.job_title() %></li>
+  <li><label>Company: </label> <%= @contact.company() %></li>
+</ul>
+<ul>
+  <% @phone_array.each() do |number| %>
+  <h4><label>Phone Type: </label> <%= number.phone_type() %></h4>
+  <li><label>Number: </label> <%= number.number() %></li>
+  <br>
+  <% end %>
+</ul>
+<ul>
+  <% @email_array.each() do |email| %>
+  <h4><label>Email Type: </label> <%= email.email_type() %></h4>
+  <li><label>Email: </label> <%= email.email() %></li>
+  <br>
+  <% end %>
+</ul>
+<ul>
+  <% @address_array.each() do |address| %>
+  <h4><label>Address Type: </label> <%= address.type() %></h4>
+  <li><label>Address: </label> <%= address.address() %></li>
+  <li><label>City: </label> <%= address.city() %></li>
+  <li><label>State: </label> <%= address.state() %></li>
+  <li><label>Zip: </label> <%= address.zip() %></li>
+  <br>
+  <% end %>
+</ul>
